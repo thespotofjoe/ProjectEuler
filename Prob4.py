@@ -1,7 +1,7 @@
 def isPalindrome (n):
     i = 2
     while 10**i < n:    #Find the number of digits in the number n
-
+        1
     j = 0
     while i != j:
         if n%10**i != n%10**j:  #Figure out whether the digit at i is the same as
@@ -14,7 +14,7 @@ def isPalindrome (n):
 def main(n):
     if isPalindrome(n):
         print(n, " is a palindrome.")
-    else
+    else:
         print(n, " is not a palindrome.")
 
 if __name__ == "__main__":
