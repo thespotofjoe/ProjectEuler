@@ -21,5 +21,11 @@ def main(n):
         print(n, " is not a palindrome.")
 
 if __name__ == "__main__":
-    for i in range(101,9999):
-        main(i)
+    done = False
+    number = 0
+    for i in reversed(range(101, 1000)):
+        for j in reversed(range(101, 1000)):
+            if isPalindrome(i*j):
+                if number < i*j:
+                    number = i*j
+    print (number)
