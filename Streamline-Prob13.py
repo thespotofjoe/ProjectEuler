@@ -1,29 +1,44 @@
+# This program is to take 100 50-digit numbers and format them
+# as the Python code of 100 arrays of 1-digit numbers for me to copy and paste.
+# This saves hours of meaningless data entry for Problem 13 on ProjectEuler.net
+
 listOfAllNum = []
 
+# The below for loop takes in 100 numbers all at once, since the pasted block
+# of 100 50-digit numbers ends in line breaks, each number takes up one iteration
+# of the for loop instantly. It stores the numbers as strings in listOfAllNum[].
 for i in range(0, 100):
     string = input(":")
     listOfAllNum.append(string)
 
+
 iter = 1
 for num in listOfAllNum:
+    # print "number1 = [" iterating the "1" up to "100." No newline afterwards.
     print("number"+str(iter)+" = [", end = '')
     
+    # Tack on each digit, followed by a "," except the last one.
     for i in range(len(num)-1):
         print(num[i], end = '')
         print(",", end = '')
     
+    # Tack on the last digit.
     print(num[len(num)-1], end = '')
 
+    # Tack on the last bracket and print a newline too.
     print("]")
 
     iter += 1
 
+# Now print a line to copy into my code which will each array of individual digits and put it into
+# a larger array of all the numbers in once place.
 print ("listOfNumbers = [", end = '')
 for i in range (1, 100):
     print ("number"+str(i)+", ", end = '')
 
 print("number100]")
 
+# Here's a multi-line string with all the data from Problem 13 for easy copy & paste.
 """
 37107287533902102798797998220837590246510135740250
 46376937677490009712648124896970078050417018260538
